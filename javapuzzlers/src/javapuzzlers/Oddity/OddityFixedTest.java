@@ -4,11 +4,12 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class OddityTest {
+public class OddityFixedTest {
+
 	@Test
 	public void testIsOdd() {
 		for(int ii = LOWERBOUND; ii <= UPPERBOUND; ii++) {
-			if(Oddity.isOdd(ii)) {
+			if(OddityFixed.isOdd(ii)) {
 				actual_count++;
 				actual_value += ii;
 			}
@@ -21,7 +22,7 @@ public class OddityTest {
 		}
 
 		test_case = -2;
-		if(!Oddity.isOdd(test_case)) {
+		if(!OddityFixed.isOdd(test_case)) {
 			System.out.println(_FUNC_ + ":OK@["+test_case+"]");
 		} else {
 			System.out.println(_FUNC_ + ":NG@["+test_case+"]");
@@ -29,7 +30,7 @@ public class OddityTest {
 		}
 
 		test_case = -1;
-		if(Oddity.isOdd(test_case)) {
+		if(OddityFixed.isOdd(test_case)) {
 			System.out.println(_FUNC_ + ":OK@["+test_case+"]");
 		} else {
 			System.out.println(_FUNC_ + ":NG@["+test_case+"]");
@@ -37,12 +38,12 @@ public class OddityTest {
 		}
 	}
 
-	private final java.lang.String _FUNC_ = "Oddity.isOdd";
-	private final int LOWERBOUND =   0;
-	private final int UPPERBOUND = 100;
+	private final java.lang.String _FUNC_ = "OddityImproved.isOdd";
+	private final int LOWERBOUND = -100;
+	private final int UPPERBOUND =  100;
 	private int actual_count = 0;
 	private int actual_value = 0;
-	private int expect_count = 50;
-	private int expect_value = 2500;
+	private int expect_count = 100;
+	private int expect_value = 0;
 	private int test_case = 0;
 }
