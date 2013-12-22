@@ -1,5 +1,5 @@
 /**
- * AvoidCreatingUnnecessaryObjects.java v1.00
+ * This code is copied and edited from Effective Java
  * @author lihongyu19781114@homail.com
  * You can use and change this program as you wish.
  * There is no warranty for this free software.
