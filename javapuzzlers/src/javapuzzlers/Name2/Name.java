@@ -1,4 +1,4 @@
-package javapuzzlers.Name58;
+package javapuzzlers.Name2;
 
 import java.util.*;
 

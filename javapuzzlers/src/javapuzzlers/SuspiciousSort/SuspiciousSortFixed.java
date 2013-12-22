@@ -5,6 +5,9 @@ import java.util.Comparator;
 import java.util.Random;
 
 public class SuspiciousSortFixed {
+	//  Do not use a subtraction-based comparator
+	// unless you are sure that the difference between values
+	// will never be greater than Integer.MAX_VALUE [EJ Item 11].
 	public static void main(String[] args) {
 		Random rnd = new Random();
 		Integer[] arr = new Integer[100];
