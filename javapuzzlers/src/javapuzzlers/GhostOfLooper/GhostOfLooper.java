@@ -1,3 +1,11 @@
+/**
+ * This code is copied and edited from Java Puzzlers
+ * @author lihongyu19781114@homail.com
+ * You can use and change this program as you wish.
+ * There is no warranty for this free software.
+ * Please report any bugs to the author.
+ */
+
 package javapuzzlers.GhostOfLooper;
 public class GhostOfLooper {
 	// Narrowing primitive conversions can lose information about the magnitude or precision of numeric values.

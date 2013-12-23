@@ -1,3 +1,11 @@
+/**
+ * This code is copied and edited from Java Puzzlers
+ * @author lihongyu19781114@homail.com
+ * You can use and change this program as you wish.
+ * There is no warranty for this free software.
+ * Please report any bugs to the author.
+ */
+
 package javapuzzlers.Ruckus;
 // A single copy of each static field is shared among its declaring class and all subclasses
 // When designing one class to build on the behavior of another,

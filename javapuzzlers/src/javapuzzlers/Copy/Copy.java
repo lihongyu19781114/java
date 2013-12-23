@@ -1,3 +1,11 @@
+/**
+ * This code is copied and edited from Java Puzzlers
+ * @author lihongyu19781114@homail.com
+ * You can use and change this program as you wish.
+ * There is no warranty for this free software.
+ * Please report any bugs to the author.
+ */
+
 package javapuzzlers.Copy;
 import java.io.*;
 
@@ -15,7 +23,7 @@ public class Copy {
         } finally {
             if (in != null) in.close();
             if (out != null) out.close();
-        } 
+        }
     }
 
     public static void main(String[] args) throws IOException {

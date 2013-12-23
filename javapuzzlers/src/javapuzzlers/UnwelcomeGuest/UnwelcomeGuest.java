@@ -1,3 +1,11 @@
+/**
+ * This code is copied and edited from Java Puzzlers
+ * @author lihongyu19781114@homail.com
+ * You can use and change this program as you wish.
+ * There is no warranty for this free software.
+ * Please report any bugs to the author.
+ */
+
 package javapuzzlers.UnwelcomeGuest;
 public class UnwelcomeGuest {
 	// A blank final field can be assigned only at points in the program where it is definitely unassigned.
