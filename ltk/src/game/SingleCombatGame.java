@@ -28,15 +28,15 @@ public final class SingleCombatGame extends AbstractGame {
 
 	public static void main(String[] args) {		// {wrapper method}
 		DEBUG.println("[DEBUG]"+DEBUG.MethodName());
-		StartNewGame();
+		startNewGame();
 	}
 
-	public static void StartNewGame() {				// {delegation method}
+	public static void startNewGame() {				// {delegation method}
 		DEBUG.println("[DEBUG]"+DEBUG.MethodName());
 		showGameList();
-		SelectGame();
-		CreateRule();
-		GameStart();
+		selectGame();
+		createRule();
+		gameStart();
 	}
 
 	private static void showGameList() {
@@ -58,7 +58,7 @@ public final class SingleCombatGame extends AbstractGame {
 		}
 	}
 
-	private static void SelectGame() {
+	private static void selectGame() {
 		DEBUG.println("[DEBUG]"+DEBUG.MethodName());
 		int selectedgame = COMMON.DEFAULT_INT;
 		do {
@@ -70,19 +70,19 @@ public final class SingleCombatGame extends AbstractGame {
 		} while(!isValidSelectedGame(selectedgame));
 
 		if(selectedgame == GameListForSelect.Exit.ordinal()) {
-			GameOver();
+			gameOver();
 		}
 	}
 
-	private static void CreateRule() {
+	private static void createRule() {
 		DEBUG.println("[DEBUG]"+DEBUG.MethodName());
 	}
 
-	private static void GameStart() {
+	private static void gameStart() {
 		DEBUG.println("[DEBUG]"+DEBUG.MethodName());
 	}
 
-	private static void GameOver() {
+	private static void gameOver() {
 		DEBUG.println("[DEBUG]"+DEBUG.MethodName());
 		System.exit(0);
 	}
