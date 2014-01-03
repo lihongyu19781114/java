@@ -10,5 +10,4 @@ import card.role.AbstractRoleCard;
  * Legends of the Three Kingdoms(LTK,SanGuoSha)
  */
 public final class MonarchCard extends AbstractRoleCard {
-
 }

@@ -10,5 +10,7 @@ import game.board.AbstractBoard;
  * Legends of the Three Kingdoms(LTK,SanGuoSha)
  */
 public final class SingleCombatBoard extends AbstractBoard {
-
+	private SingleCombatBoard() {}
+	private static class SingletonHolder { private static final SingleCombatBoard INSTANCE = new SingleCombatBoard(); }
+	public static SingleCombatBoard getInstance() { return SingletonHolder.INSTANCE; }
 }

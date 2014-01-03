@@ -6,4 +6,8 @@ public abstract class COMMON {
 	public static void println(String stringforprint) {
 		System.out.println(stringforprint);
 	}
+
+	public static void print(String stringforprint) {
+		System.out.print(stringforprint);
+	}
 }

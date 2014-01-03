@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 import lib.COMMON;
 import lib.DEBUG;
+import lib.MESSAGE;
 
 import game.AbstractGame;
+import game.rule.SingleCombatRule;
 /**
  *【单挑游戏】
  * @author lihongyu19781114@hotmail.com
@@ -15,24 +17,13 @@ import game.AbstractGame;
  * Legends of the Three Kingdoms(LTK,SanGuoSha)
  */
 public final class SingleCombatGame extends AbstractGame {
-	// GameList[START]
-	private static String[] GameListForDisplay = {
-		"1)SingleCombat_1v1",
-		"0)Exit",
-	};
-	private enum GameListForSelect {
-		Exit,
-		SingleCombat_1v1,
-	}
-	// GameList[END]
-
 	public static void main(String[] args) {		// {wrapper method}
-		DEBUG.println("[DEBUG]"+DEBUG.MethodName());
+		DEBUG.println(DEBUG.ClassName()+"."+DEBUG.MethodName()+"("+DEBUG.FileName()+":"+DEBUG.LineNumber()+")");
 		startNewGame();
 	}
 
 	public static void startNewGame() {				// {delegation method}
-		DEBUG.println("[DEBUG]"+DEBUG.MethodName());
+		DEBUG.println(DEBUG.ClassName()+"."+DEBUG.MethodName()+"("+DEBUG.FileName()+":"+DEBUG.LineNumber()+")");
 		showGameList();
 		selectGame();
 		createRule();
@@ -40,16 +31,16 @@ public final class SingleCombatGame extends AbstractGame {
 	}
 
 	private static void showGameList() {
-		DEBUG.println("[DEBUG]"+DEBUG.MethodName());
-		COMMON.println("SelectGame:");
-		for(String gamelistfordisplay: GameListForDisplay) {
+		DEBUG.println(DEBUG.ClassName()+"."+DEBUG.MethodName()+"("+DEBUG.FileName()+":"+DEBUG.LineNumber()+")");
+		for(String gamelistfordisplay: MESSAGE.GameListForDisplay) {
 			COMMON.println(gamelistfordisplay);
 		}
+		COMMON.print(MESSAGE.GameListMessage);
 	}
 
 	private static boolean isValidSelectedGame(int selectedgame) {
 		try {
-			for(GameListForSelect gamelistforselect_value: GameListForSelect.values()) {
+			for(MESSAGE.GameListForSelect gamelistforselect_value: MESSAGE.GameListForSelect.values()) {
 				if(selectedgame == gamelistforselect_value.ordinal()) return true;
 			}
 			return false;
@@ -59,7 +50,7 @@ public final class SingleCombatGame extends AbstractGame {
 	}
 
 	private static void selectGame() {
-		DEBUG.println("[DEBUG]"+DEBUG.MethodName());
+		DEBUG.println(DEBUG.ClassName()+"."+DEBUG.MethodName()+"("+DEBUG.FileName()+":"+DEBUG.LineNumber()+")");
 		int selectedgame = COMMON.DEFAULT_INT;
 		do {
 			try {
@@ -69,21 +60,23 @@ public final class SingleCombatGame extends AbstractGame {
 			}
 		} while(!isValidSelectedGame(selectedgame));
 
-		if(selectedgame == GameListForSelect.Exit.ordinal()) {
-			gameOver();
+		if(selectedgame != MESSAGE.GameListForSelect.SingleCombat_1v1 .ordinal()) {
+			System.exit(0);
 		}
 	}
 
 	private static void createRule() {
-		DEBUG.println("[DEBUG]"+DEBUG.MethodName());
+		DEBUG.println(DEBUG.ClassName()+"."+DEBUG.MethodName()+"("+DEBUG.FileName()+":"+DEBUG.LineNumber()+")");
+		SingleCombatRule.createRule();
 	}
 
 	private static void gameStart() {
-		DEBUG.println("[DEBUG]"+DEBUG.MethodName());
+		DEBUG.println(DEBUG.ClassName()+"."+DEBUG.MethodName()+"("+DEBUG.FileName()+":"+DEBUG.LineNumber()+")");
+		SingleCombatRule.gameStart();
 	}
 
-	private static void gameOver() {
-		DEBUG.println("[DEBUG]"+DEBUG.MethodName());
-		System.exit(0);
+	public static void gameOver() {
+		DEBUG.println(DEBUG.ClassName()+"."+DEBUG.MethodName()+"("+DEBUG.FileName()+":"+DEBUG.LineNumber()+")");
+		startNewGame();
 	}
 }

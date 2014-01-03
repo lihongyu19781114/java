@@ -10,5 +10,7 @@ import game.area.player.AbstractPlayerArea;
  * Legends of the Three Kingdoms(LTK,SanGuoSha)
  */
 public final class SingleCombatPlayerArea extends AbstractPlayerArea {
-
+	private SingleCombatPlayerArea() {}
+	private static class SingletonHolder { private static final SingleCombatPlayerArea INSTANCE = new SingleCombatPlayerArea(); }
+	public static SingleCombatPlayerArea getInstance() { return SingletonHolder.INSTANCE; }
 }

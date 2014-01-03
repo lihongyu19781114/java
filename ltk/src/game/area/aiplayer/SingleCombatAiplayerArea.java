@@ -10,5 +10,7 @@ import game.area.aiplayer.AbstractAiplayerArea;
  * Legends of the Three Kingdoms(LTK,SanGuoSha)
  */
 public final class SingleCombatAiplayerArea extends AbstractAiplayerArea {
-
+	private SingleCombatAiplayerArea() {}
+	private static class SingletonHolder { private static final SingleCombatAiplayerArea INSTANCE = new SingleCombatAiplayerArea(); }
+	public static SingleCombatAiplayerArea getInstance() { return SingletonHolder.INSTANCE; }
 }

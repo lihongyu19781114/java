@@ -17,6 +17,6 @@ public abstract class DEBUG {
 	//usage:e.printStackTrace();
 
 	public static void println(String stringforprint) {
-		System.out.println(stringforprint);
+//		System.out.println(stringforprint);
 	}
 }
